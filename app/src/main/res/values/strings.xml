@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SportNews</string>
+    <string name="turn_on_internet">Turn internet ON</string>
+    <string name="no_connection_to_the_server">No connection to the server</string>
+    <string name="football">football</string>
+    <string name="hockey">hockey</string>
+    <string name="tennis">tennis</string>
+    <string name="basketball">basketball</string>
+    <string name="volleyball">volleyball</string>
+    <string name="cybersport">cybersport</string>
+    <string name="team1">team1</string>
+    <string name="team2">team2</string>
+    <string name="tournament">tournament</string>
+    <string name="header">header</string>
+    <string name="text">text</string>
+    <string name="title">title</string>
+    <string name="coefficient">coefficient</string>
+    <string name="time">time</string>
+    <string name="place">place</string>
+    <string name="preview">preview</string>
+    <string name="prediction">prediction</string>
+    <string name="vs">VS</string>
+</resources>

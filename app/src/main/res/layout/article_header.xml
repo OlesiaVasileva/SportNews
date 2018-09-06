@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/article_team1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team1"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/mainColor"
+            android:textSize="26sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vs"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/mainColor"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/article_team2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team2"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/mainColor"
+            android:textSize="26sp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/article_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/article_tournament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tournament"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/article_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/place"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+
+        android:textSize="24sp"/>
+
+</LinearLayout>
