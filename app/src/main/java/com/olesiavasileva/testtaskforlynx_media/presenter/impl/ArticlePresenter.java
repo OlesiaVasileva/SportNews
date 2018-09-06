@@ -19,7 +19,7 @@ public class ArticlePresenter implements IArticlePresenter {
 
     private final ArticleApi model;
     private final IArticleView view;
-    public static final String TAG = "MyLogs";
+    private static final String TAG = "MyLogs";
 
     public ArticlePresenter(IArticleView view) {
         this.view = view;

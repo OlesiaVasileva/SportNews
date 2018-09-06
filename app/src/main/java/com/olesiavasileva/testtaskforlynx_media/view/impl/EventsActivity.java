@@ -27,14 +27,12 @@ import java.util.List;
 
 public class EventsActivity extends AppCompatActivity implements IEventsView {
 
-    public static final String EXTRA_CATEGORY = "category";
-    private IEventsPresenter presenter;
     private ProgressBar progressBar;
     private EventsRecyclerAdapter adapter;
     private List<EventModel> events;
 
+    public static final String EXTRA_CATEGORY = "category";
     public static final String TAG = "MyLogs";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +44,11 @@ public class EventsActivity extends AppCompatActivity implements IEventsView {
         assert connectivityManager != null;
         NetworkInfo networkinfo = connectivityManager.getActiveNetworkInfo();
         if (networkinfo != null && networkinfo.isConnected()) {
-            if (presenter == null) {
-                presenter = new EventsPresenter(this);
-            }
-            Bundle bundle = getIntent().getExtras();
-            if (bundle != null) {
-                String category = bundle.get(EXTRA_CATEGORY).toString().toLowerCase();
-                progressBar.setVisibility(View.VISIBLE);
-                presenter.getResponse(category, false);
-            }
+            IEventsPresenter presenter = new EventsPresenter(this);
+            String category = getIntent().getSerializableExtra(EXTRA_CATEGORY).toString().toLowerCase();
+            progressBar.setVisibility(View.VISIBLE);
+            presenter.getResponse(category);
+
         } else {
             showNoConnectionMessage();
         }

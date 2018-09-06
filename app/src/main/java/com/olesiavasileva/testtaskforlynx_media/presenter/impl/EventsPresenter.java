@@ -19,7 +19,7 @@ public class EventsPresenter implements IEventsPresenter {
 
     private final EventsApi model;
     private final IEventsView view;
-    public static final String TAG = "MyLogs";
+    private static final String TAG = "MyLogs";
 
     public EventsPresenter(IEventsView view) {
         this.view = view;
@@ -27,7 +27,7 @@ public class EventsPresenter implements IEventsPresenter {
     }
 
     @Override
-    public void getResponse(String category, boolean isUpdate) {
+    public void getResponse(String category) {
         Observable<EventsResponse> dataObservable = model.getResponse(category);
         Log.d(TAG, "dataObservable:" + dataObservable);
 

@@ -18,18 +18,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn_football = findViewById(R.id.btn_football);
-        Button btn_hockey = findViewById(R.id.btn_hockey);
-        Button btn_tennis = findViewById(R.id.btn_tennis);
-        Button btn_basketball = findViewById(R.id.btn_basketball);
-        Button btn_volleyball = findViewById(R.id.btn_volleyball);
-        Button btn_cybersport = findViewById(R.id.btn_cybersport);
-        btn_football.setOnClickListener(view -> startNewActivity(Category.FOOTBALL));
-        btn_hockey.setOnClickListener(view -> startNewActivity(Category.HOCKEY));
-        btn_tennis.setOnClickListener(view -> startNewActivity(Category.TENNIS));
-        btn_basketball.setOnClickListener(view -> startNewActivity(Category.BASKETBALL));
-        btn_volleyball.setOnClickListener(view -> startNewActivity(Category.VOLLEYBALL));
-        btn_cybersport.setOnClickListener(view -> startNewActivity(Category.CYBERSPORT));
+        Button btnFootball = findViewById(R.id.btn_football);
+        Button btnHockey = findViewById(R.id.btn_hockey);
+        Button btnTennis = findViewById(R.id.btn_tennis);
+        Button btnBasketball = findViewById(R.id.btn_basketball);
+        Button btnVolleyball = findViewById(R.id.btn_volleyball);
+        Button btnCybersport = findViewById(R.id.btn_cybersport);
+        btnFootball.setOnClickListener(view -> startNewActivity(Category.FOOTBALL));
+        btnHockey.setOnClickListener(view -> startNewActivity(Category.HOCKEY));
+        btnTennis.setOnClickListener(view -> startNewActivity(Category.TENNIS));
+        btnBasketball.setOnClickListener(view -> startNewActivity(Category.BASKETBALL));
+        btnVolleyball.setOnClickListener(view -> startNewActivity(Category.VOLLEYBALL));
+        btnCybersport.setOnClickListener(view -> startNewActivity(Category.CYBERSPORT));
     }
 
     private void startNewActivity(Category category) {

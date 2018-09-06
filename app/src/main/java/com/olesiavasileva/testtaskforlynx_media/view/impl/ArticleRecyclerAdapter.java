@@ -18,19 +18,19 @@ import com.olesiavasileva.testtaskforlynx_media.model.entity.ArticleModel;
 
 public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private ArticleModel articleModel;
+
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
     private static final int TYPE_FOOTER = 2;
-
-    private ArticleModel articleModel;
-
-    public static final String TAG = "MyLogs";
+    private static final String TAG = "MyLogs";
 
     void setArticle(ArticleModel article) {
         articleModel = article;
         notifyDataSetChanged();
     }
 
+    @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
@@ -106,7 +106,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         TextView tournament;
         TextView place;
 
-        public HeaderHolder(View v) {
+        HeaderHolder(View v) {
             super(v);
 
             team1 = v.findViewById(R.id.article_team1);
@@ -122,7 +122,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         TextView header;
         TextView text;
 
-        public ArticleHolder(View v) {
+        ArticleHolder(View v) {
             super(v);
 
             header = v.findViewById(R.id.article_header);
@@ -134,7 +134,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         TextView prediction;
 
-        public PredictionHolder(View v) {
+        PredictionHolder(View v) {
             super(v);
 
             prediction = v.findViewById(R.id.article_prediction);

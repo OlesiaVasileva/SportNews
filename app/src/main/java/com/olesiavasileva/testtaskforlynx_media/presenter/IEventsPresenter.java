@@ -5,5 +5,5 @@ package com.olesiavasileva.testtaskforlynx_media.presenter;
  */
 
 public interface IEventsPresenter {
-    void getResponse(String category, boolean isUpdate);
+    void getResponse(String category);
 }

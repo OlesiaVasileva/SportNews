@@ -25,12 +25,10 @@ import com.olesiavasileva.testtaskforlynx_media.view.IArticleView;
 
 public class ArticleActivity extends AppCompatActivity implements IArticleView {
 
-    public static final String EXTRA_ARTICLE = "article";
-
-    private IArticlePresenter presenter;
     private ProgressBar progressBar;
     private ArticleRecyclerAdapter adapter;
 
+    public static final String EXTRA_ARTICLE = "article";
     public static final String TAG = "MyLogs";
 
     @Override
@@ -48,15 +46,11 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView {
         assert connectivityManager != null;
         NetworkInfo networkinfo = connectivityManager.getActiveNetworkInfo();
         if (networkinfo != null && networkinfo.isConnected()) {
-            if (presenter == null) {
-                presenter = new ArticlePresenter(this);
-            }
-            Bundle bundle = getIntent().getExtras();
-            if (bundle != null) {
-                String article = bundle.get(EXTRA_ARTICLE).toString().toLowerCase();
-                progressBar.setVisibility(View.VISIBLE);
-                presenter.loadArticle(article);
-            }
+            IArticlePresenter presenter = new ArticlePresenter(this);
+            String article = getIntent().getSerializableExtra(EXTRA_ARTICLE).toString().toLowerCase();
+            progressBar.setVisibility(View.VISIBLE);
+            presenter.loadArticle(article);
+
         } else {
             showNoConnectionMessage();
         }
